@@ -1,0 +1,27 @@
+You feed information, NN adjusts weights and biases, to have correct o/p - ∑(ViWi+Bi)
+this gives a fairly complex linear function
+This is done with advanced regression techniques
+But this limits the degree of complexity that our network can have, to be linear
+Activation function: a non linear function that will allow you to add a degree of complexity to your network
+ex: sigmoid - maps any value to (-1,1)
+Activation function that is used more than sigmoid these days, RELU - rectified linear unit 0 for all < 0, x for all x > 0
+Activation functions also shrink down data, so it's not as large
+Loss function - helps understand how weights and biases are adjusted
+    A way of calculating error, not  linear , thus add higher degree complexity to our model
+    ex: MSE - mean square Error
+
+I/P layer
+image data in 28x28 matrix, not suitable to feed into NN, so flatten the data
+[[1],[2],[3]] ==> [1,2,3]
+to get a list of 784 elements as i/p to NN
+784 Neurons as I/P layer
+
+O/P layer
+O/P - we will have 10 neurons, each representing one of the 10 classes
+each will have value, reflective of how much network thinks its that class
+
+Hidden Layer
+can have just 2 layers, I/P to O/P i.e direct pixel to class mapping
+i.e 784x10 weights and biases
+
+with 128 N hidden layer, with fully connected
