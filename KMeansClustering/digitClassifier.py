@@ -1,5 +1,4 @@
 import numpy as np
-import sklearn
 from sklearn.preprocessing import scale
 from sklearn.datasets import load_digits
 from sklearn.decomposition import PCA
@@ -29,6 +28,8 @@ def bench_k_means(estimator, name, data):
              metrics.silhouette_score(data, estimator.labels_,
                                       metric='euclidean')))
 
+#calculates distance from every point to every centroid
+#(no. of points)x(no. of centroids)x(no. of iterations)x(no. of features)
 clf = KMeans(n_clusters=k, init="random", n_init=10, max_iter=1200)
 bench_k_means(clf, "1", data)
 
