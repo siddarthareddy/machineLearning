@@ -4,6 +4,7 @@ from sklearn import svm
 from sklearn import metrics
 from sklearn.neighbors import KNeighborsClassifier
 
+#load the data set
 cancer = datasets.load_breast_cancer()
 
 # print(len(cancer.feature_names))
@@ -12,6 +13,7 @@ cancer = datasets.load_breast_cancer()
 x = cancer.data
 y = cancer.target
 
+#split into test and train data
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x,y, test_size=0.2)
 
 # print(x_train[0])
@@ -21,8 +23,9 @@ x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x,y,
 
 #hard-margin can effect quality of classifier, overfitting the data, but poorly representing the model
 #soft-margin to draw better hyperp lanes, thus better classifier, allowing few points to exist inside margins
-
+#set the parameters for model
 clf = svm.SVC(kernel="linear", C=2)
+#train the model on the data
 clf.fit(x_train, y_train)
 
 y_pred = clf.predict(x_test)
