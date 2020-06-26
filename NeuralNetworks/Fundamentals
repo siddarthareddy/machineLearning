@@ -25,3 +25,6 @@ can have just 2 layers, I/P to O/P i.e direct pixel to class mapping
 i.e 784x10 weights and biases
 
 with 128 N hidden layer, with fully connected
+
+
+For a chatbot, more intents and tags, more hidden layers are needed, 2 hidden layers enough for our classification task

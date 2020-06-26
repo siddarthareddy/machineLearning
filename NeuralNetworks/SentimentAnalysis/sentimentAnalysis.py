@@ -82,7 +82,7 @@ def review_encode(s):
 #Has the elements of an emotionally gripping story. Yet is feels less like a romance than like a coffee-table book celebrating the magic of special effect.
 model = keras.models.load_model("model.h5")
 
-with open("../data/review.txt", encoding="utf-8") as f:
+with open("../../data/review.txt", encoding="utf-8") as f:
     for line in f.readlines():
         nline = line.replace(",", " ").replace(".", " ").replace("(", " ").replace(")", " ").replace(":", " ").replace("\"", " ").strip().split(" ")
         encode = review_encode(nline)
